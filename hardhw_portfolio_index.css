@@ -9,7 +9,7 @@ body {
   * {
     box-sizing: border-box;
   }
-  #masthead {
+  #collection {
     position: fixed;
     z-index: 99;
     width: 100%;
@@ -26,7 +26,7 @@ body {
     clear: both;
   }
 
-  #logo {
+  #tagname {
     float: left;
     width: 250px;
     height: 90px;
@@ -85,6 +85,39 @@ body {
     border-bottom: 2px solid #eeeeee;
   }
 
+  .work {
+    position: relative;
+    float: left;
+    width: 274px;
+    margin: 20px 0 25px;
+    overflow: auto;
+  }
+  
+  .work:nth-child(even) {
+    margin-right: 40px;
+  }
+  
+  .work img {
+    width: 100%;
+    border: 0 none;
+    opacity: 0.8;
+  }
+  
+  .work h3 {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+    background: #4aaaa5;
+    border-bottom: 0;
+  }
+
+
   footer {
     padding: 30px 0;
     clear: both;
@@ -95,5 +128,30 @@ body {
     background: #666666;
     border-top: 8px solid plum;
     height: 50px;
+  }
+  @media (max-width: 768px) {
+    nav {
+      float: left;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .main-section {
+      margin-top: 40px;
+      padding-bottom: 60px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    nav {
+      float: left;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .main-section {
+      margin-top: 40px;
+      padding-bottom: 60px;
+    }
   }
 
