@@ -28,19 +28,32 @@ body {
     clear: both;
   }
 
+  h1 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-weight: 700;
+    color: plum;
+    margin-bottom: 20px;
+  }
+
+  p {
+      margin-bottom: 20px;
+      color: black;
+      font-family: 'Merriweather', serif;
+  }
+
   #tagname {
 
     float: left;
     width: 250px;
     height: 90px;
-    font-family: Georgia, Times, "Times New Roman", serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 30px;
     font-weight: 700;
     line-height: 90px;
     color: #ffffff;
     text-align: center;
     text-decoration: none;
-    background: #4aaaa5;
+    background: plum;
 
   }
 
@@ -62,6 +75,7 @@ body {
   #main-container {
     padding-top: 130px;
     min-height: calc(100vh - 70px);
+    clear: both;
   }
 
   .main-section {
@@ -82,7 +96,7 @@ body {
     color: #cccccc;
     text-align: center;
     background: #666666;
-    border-top: 8px solid #4aaaa5;
+    border-top: 8px solid plum;
     height: 50px;
   }
 
