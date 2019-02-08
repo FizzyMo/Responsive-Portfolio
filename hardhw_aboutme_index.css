@@ -100,6 +100,32 @@ body {
     height: 50px;
   }
 
+  @media (max-width: 768px) {
+    nav {
+      float: left;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .main-section {
+      margin-top: 40px;
+      padding-bottom: 60px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    nav {
+      float: left;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .main-section {
+      margin-top: 40px;
+      padding-bottom: 60px;
+    }
+  }
+
 
 
 
