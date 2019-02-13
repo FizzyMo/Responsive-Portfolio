@@ -3,37 +3,42 @@ body {
     font-size: 18px;
     line-height: 34px;
     color: #777777;
-    background: url("full-bloom.png");
+    background: url("../images/full-bloom.png");
   }
   
   * {
     box-sizing: border-box;
   }
-  
-  #masthead {
+  #collection {
     position: fixed;
     z-index: 99;
     width: 100%;
     margin: 0 0 30px;
     overflow: auto;
     color: #ffffff;
+    background: #ffffff;
     border-bottom: 2px solid #cccccc;
   }
-  #logo {
+  .container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;
+  }
+
+  #tagname {
     float: left;
-    width: 350px;
+    width: 250px;
     height: 90px;
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 30px;
-    text-align: center;
     font-weight: 700;
     line-height: 90px;
     color: #ffffff;
     text-align: center;
     text-decoration: none;
     background:plum;
-  
-  }
+  }  
 
   nav {
     float: right;
@@ -45,24 +50,16 @@ body {
     padding-left: 15px;
     margin-left: 15px;
     line-height: 18px;
-    color:black;
+    color: #999;
     text-decoration: none;
     border-left: 1px solid #efefef;
   }
-
   #main-container {
     padding-top: 130px;
     min-height: calc(100vh - 70px);
   }
-  
-  .container {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    clear: both;
-  }
+
   .main-section {
-    position: absolute;
     float: left;
     width: 100%;
     max-width: 960px;
@@ -70,55 +67,56 @@ body {
     margin: 0 0 40px;
     background: #ffffff;
     border: 1px solid #dddddd;
-    clear: both;
   }
-  
+
   h1 {
-    margin-bottom: 20px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 38px;
+    padding-bottom: 20px;
+    font-size: 30px;
     line-height: 49px;
     border-bottom: 3px solid #dddddd;
     color: plum;
+    font-family: 'Cormorant Garamond', serif;
+  }
 
+  h3 {
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 22px;
+    border-bottom: 2px solid #eeeeee;
   }
-  #contact-form ul {
-    margin-bottom: 20px;
+
+  .work {
+    position: relative;
+    float: left;
+    width: 274px;
+    margin: 20px 0 25px;
+    overflow: auto;
   }
   
-  #contact-form li {
-    margin-bottom: 10px;
+  .work:nth-child(even) {
+    margin-right: 40px;
   }
   
-  label,
-  input[type=text],
-  input[type=email],
-  textarea {
-    display: block;
+  .work img {
     width: 100%;
-  }
-  
-  input[type=text],
-  input[type=email],
-  textarea {
-    height: 35px;
-    padding: 0 10px;
-    font-size: 14px;
-    border: 1px solid #dddddd;
-  }
-  
-  textarea {
-    height: 115px;
-  }
-  
-  input[type=submit] {
-    padding: 10px;
-    font-size: 18px;
-    color: #ffffff;
-    cursor: pointer;
-    background: plum;
     border: 0 none;
+    opacity: 0.8;
   }
+  
+  .work h3 {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+    background: #4aaaa5;
+    border-bottom: 0;
+  }
+
 
   footer {
     padding: 30px 0;
@@ -130,10 +128,7 @@ body {
     background: #666666;
     border-top: 8px solid plum;
     height: 50px;
-    width:100%;
-    position: fixed;
   }
-
   @media (max-width: 768px) {
     nav {
       float: left;
@@ -159,4 +154,4 @@ body {
       padding-bottom: 60px;
     }
   }
-  
+
