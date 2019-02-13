@@ -16,7 +16,6 @@ body {
     margin: 0 0 30px;
     overflow: auto;
     color: #ffffff;
-    background: #ffffff;
     border-bottom: 2px solid #cccccc;
   }
   .container {
@@ -28,7 +27,7 @@ body {
 
   #tagname {
     float: left;
-    width: 250px;
+    width: 350px;
     height: 90px;
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 30px;

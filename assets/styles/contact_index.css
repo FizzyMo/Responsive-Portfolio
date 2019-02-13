@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
   }
   
-  #masthead {
+  #collection {
     position: fixed;
     z-index: 99;
     width: 100%;
@@ -19,7 +19,7 @@ body {
     color: #ffffff;
     border-bottom: 2px solid #cccccc;
   }
-  #logo {
+  #tagme {
     float: left;
     width: 350px;
     height: 90px;
@@ -45,7 +45,7 @@ body {
     padding-left: 15px;
     margin-left: 15px;
     line-height: 18px;
-    color:black;
+    color: #999;
     text-decoration: none;
     border-left: 1px solid #efefef;
   }
