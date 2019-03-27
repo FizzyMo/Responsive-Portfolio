@@ -67,8 +67,8 @@ nav a {
   float: left;
   width: 100%;
   max-width: 960px;
+  margin-bottom: 8%;
   padding: 30px;
-  margin: 0 0 40px;
   background: #ffffff;
   border: 1px solid #dddddd;
   clear: both;
@@ -118,6 +118,17 @@ input[type=submit] {
   cursor: pointer;
   background: plum;
   border: 0 none;
+}
+
+#forms {
+  padding-top: 1%;
+  font-size: 120%;
+}
+
+nav#form-link {
+  color: #999;
+  text-decoration: none;
+  float: left;
 }
 
 footer {
