@@ -13,9 +13,14 @@ div.ui.grid.container {
 table.ui.inverted.pink.table {
     margin-left: .5em;
     width: 1890px;
+    margin-top: 5%;
+}
+
+div.column.p {
+    font-size: larger;
 }
 
 div.ui.three.column.doubling.stackable.grid.container {
     text-align: center;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 }
