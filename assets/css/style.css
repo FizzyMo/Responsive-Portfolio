@@ -20,10 +20,16 @@ img.auth-image {
 div.ui.grid.container {
     margin-top: 5%;
 }
+img.ui.centered.small.image {
+    padding-top: 6%;
+}
 
 table.ui.inverted.pink.table {
     margin-top: 5%;
     text-align: center;
+}
+.ui.table td{
+    padding: 0%;
 }
 
 div.column.p {
@@ -33,7 +39,10 @@ div.column.p {
 div.ui.three.column.doubling.stackable.grid.container {
     text-align: center;
     margin: 5%;
-    background-color: orange;
     font-size: large;
+}
+mark {
+    background: #ffc266;
+    color: black;
 }
 
