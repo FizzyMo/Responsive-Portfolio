@@ -7,9 +7,13 @@
     <title>Carisa Saenz-Videtto</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet"> 
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="assets/css/style.css">
 
 
@@ -31,50 +35,55 @@
 
 <br>
 <br>
-<div class="ui hidden divider"></div>
-<br>
+<button class="fluid ui pink disabled button">Top Projects</button>
 
-<table class="ui inverted pink five column table">
-    <thead>
-      <tr>
-      <th>Live Image</th>
-      <th>Top Projects</th>
-      <th>Type</th>
-      <th>Languages</th>
-      <th>Live Link</th>
-      
-    </tr></thead><tbody>
-      <tr class="center aligned">
-        <td>
-       
-          <img class="ui centered image" src="assets/images/News.App.1.png" style="height: 50px; width: 75px; margin-top: 4%;">
-       </td>
-        <td>New York Times Editorial Approach</td>
-        <td>Project 1</td>
-        <td>HTML5, CSS, JavaScript, jQuery, Bootstrap, and Google Firebase</td>
-        <td>
-          <a href="https://fizzymo.github.io/Number-1-Team" target="_blank">
-          <button class="ui teal button">View Live Demo</button>
-          </a>
-        </td>
-      </tr>
-      <tr>
-          <td>
-       
-              <img class="ui centered image" src="assets/images/News.Glean.png" style="height: 50px; width: 75px; margin-top: 4%;">
-           </td>
-        <td>News Glean</td>
-        <td>Project 2</td>
-        <td>HTML5, CSS3, JavaScript, Passport Authentication, Node.js, Express, Mongo DB, Semantic UI, React.js, Moment.js, MERN Stack, Heroku Deployment, and Git Hub Version Control </td>
-        <td>
-          <a href="https://news-glean.herokuapp.com" target="_blank">
-          <button class="ui teal button"> View Live Demo</button>
-          </a>
-        </td>
-      </tr>
-      
-    </tbody>
-  </table>
+<div class="container1">
+  <div class="row">
+    <div class="col-6">
+		<table class="table table-image">
+		  <thead>
+		    <tr>
+		      <th scope="col">Live Image</th>
+		      <th scope="col">Title</th>
+		      <th scope="col">Languages</th>
+		      <th scope="col">Live Link</th>
+		      <th scope="col">Github Link</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td class="w-25">
+			      <img src="assets/images/nyt.gif" style="height: 200px; width: 300px;">
+		      </td>
+		      <td>New York Times Editorial Approach </td>
+		      <td>	HTML5, CSS, JavaScript, jQuery, Bootstrap, <br> Google Firebase, and Github.	
+			</td>
+		      <td><a href="https://fizzymo.github.io/Number-1-Team" target="_blank">
+            <button class="ui teal button">View Live Demo</button>
+            </a></td>
+          <td><a href="https://github.com/FizzyMo/Number-1-Team" target="_blank">
+            <button class="ui teal button">View GitHub</button>
+          </a></td>
+		    </tr>
+		    <tr>
+		      <td class="w-25">
+			      <img src="assets/images/News-Glean.gif" style="height: 200px; width: 300px;">
+		      </td>
+		      <td>News Glean</td>
+          <td>HTML5, CSS3, JavaScript, Passport Authentication, Node.js, Express,<br> Mongo DB,
+            Semantic UI, React.js, Moment.js, MERN Stack, Heroku Deployment, and Git Hub.</td>
+          <td><a href="https://news-glean.herokuapp.com/" target="_blank">
+            <button class="ui teal button">View Live Demo</button>
+          </a></td>
+          <td><a href="https://github.com/FizzyMo/Final-PROJECT" target="_blank">
+            <button class="ui teal button">View GitHub</button>
+          </a></td>
+		    </tr>
+		  </tbody>
+		</table>   
+    </div>
+  </div>
+</div>
 
 <br>
 <br>
@@ -122,7 +131,7 @@
       
   <div class="card">
     <div class="image">
-      <img src="assets/images/News.Glean.png">
+      <img src="assets/images/News-Glean.gif" style="height: 160px;">
     </div>
   <div class="content">
     <div class="header">News Glean</div>
@@ -142,7 +151,7 @@
 </div>
 <div class="card">
     <div class="image">
-      <img src="assets/images/News.App.1.png">
+      <img src="assets/images/nyt.gif">
     </div>
   <div class="content">
     <div class="header">New York Times Editorial Approach</div>
@@ -214,7 +223,7 @@
                   </div>
 								</div>
 								<div class="item">
-										<i class="file icon" style="font-size: xx-large"></i>
+										<i class="file icon" style="font-size: xx-large; padding-left: 1%;"></i>
 						
                         <div class="content">
                     <a href="CERTIFICATE.pdf" target="_blank">
@@ -223,7 +232,7 @@
                         </div>
                 </div>
                 <div class="item">
-                    <i class="linkedin icon" style="font-size: xx-large;"></i> 
+                    <i class="linkedin icon" style="font-size: xx-large; padding-left: 1%;"></i> 
                         <div class="content">
                     <a href="https://www.linkedin.com/in/carisa-saenz-videtto-374501b4/" target="_blank">
                       <button class="ui teal button">Linkedin Profile</button>       
@@ -232,7 +241,7 @@
                         </div>
                 </div>
                 <div class="item">
-                    <i class="github icon" style="font-size: xx-large;"></i>
+                    <i class="github icon" style="font-size: xx-large; padding-left: 1%;"></i>
                         <div class="content">
                         <a href="https://github.com/FizzyMo" target="_blank">
                           <button class="ui teal button">GitHub Portfolio</button>      
@@ -240,7 +249,7 @@
                         </div>
                 </div>
                 <div class="item">
-                    <i class="file word icon" style="font-size: xx-large;"></i>
+                    <i class="file word icon" style="font-size: xx-large; padding-left: 1%;"></i>
                     <div class="content">
                         <a href="Carisa.Saenz.Formal.Resume.pdf" target="_blank" >
                           <button class="ui teal button">Resume</button>
