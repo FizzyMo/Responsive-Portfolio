@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressElements = document.querySelectorAll('.progress');
     
     progressElements.forEach(progress => {
-        const width = progress.getAttribute('data-width');
+        const width = parseInt(progress.getAttribute('data-width'), 10);
         const bar = progress.querySelector('.bar span');
         bar.style.width = width + '%';
     });
