@@ -688,7 +688,7 @@ position: relative;
 .footer-text p {
   font-size: 1.5rem;
 }
-.footer-iconTop a {
+.footer-icon-top a {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -701,7 +701,7 @@ position: relative;
   overflow: hidden;
 }
 
-.footer-iconTop a::before {
+.footer-icon-top a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -713,17 +713,17 @@ position: relative;
   transition: .6s;
 }
 
-.footer-iconTop a:hover::before {
+.footer-icon-top a:hover::before {
   width: 100%;
 }
 
-.footer-iconTop a i {
+.footer-icon-top a i {
   font-size: 2.8rem;
   color: var(--bg-color);
   transition: .6s;
 }
 
-.footer-iconTop a:hover i {
+.footer-icon-top a:hover i {
   color: var(--main-color);
 }
 /* End Footer Section Styling */
