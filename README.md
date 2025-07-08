@@ -1,5 +1,6 @@
 ![Header](https://github.com/user-attachments/assets/a039ce3a-a652-4d0a-be3e-b0ee4b55c83c)
-# Carisa Saenz-Videtto's Portfolio
+<h1 align="center">Carisa Saenz-Videtto's Portfolio</h1>
+
 I'm delighted you're looking over my portfolio. This website provides an insight into my life as a backend developer. It's a combination of my enthusiasm for creating stylish, high-performance web solutions and a touch of my personality. You'll find hints of my favorite colors, such as deep purples and vivid pinks, scattered throughout - it's just a simple way to bring a little "me" into the professional design.
 
 ## Table of Contents
