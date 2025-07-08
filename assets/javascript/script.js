@@ -1,54 +1,27 @@
-const form = document.querySelector("form");
-const fullName = document.getElementById("name");
-const email = document.getElementById("email");
-const phone = document.getElementById("phone");
-const subject = document.getElementById("subject");
-const message = document.getElementById("message");
+document.querySelector("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-async function sendEmail(formData) {
-    try {
-        const response = await fetch('/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData) 
-        });
+  const formData = {
+    name: document.getElementById("name").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
 
-        // Check for successful response
-        if (response.ok) { 
-            Swal.fire({
-                title: "Great",
-                text: "Your email has been sent",
-                icon: "success"
-            });
-            form.reset(); // Clear the form
-        } else {
-            
-            console.error('Error sending email (Server Error):', response.status, response.statusText);
-            throw new Error("There was a server error sending your email."); 
-        }
+  try {
+    const res = await fetch('/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
 
-    } catch (error) { 
-        console.error("Error sending email:", error);
-        Swal.fire({
-            title: "Error",
-            text: "There was an error sending your email. Please try again later.",
-            icon: "error"
-        });
+    const data = await res.json();
+
+    if (data.success) {
+      alert("Email sent successfully!");
+    } else {
+      alert("Something went wrong. Try again later.");
     }
-}
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault(); 
-
-    const formData = {
-        fullName: fullName.value,
-        email: email.value,
-        phone: phone.value,
-        subject: subject.value,
-        message: message.value
-    };
-
-    sendEmail(formData); 
+  } catch (err) {
+    alert("Server error. Please try again.");
+  }
 });

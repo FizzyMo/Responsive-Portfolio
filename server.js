@@ -1,59 +1,40 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const path = require('path');
-const nodemailer = require('nodemailer'); 
+const axios = require('axios');
 
-dotenv.config(); 
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Middleware
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.json()); 
-
-app.use('/assets', express.static(path.join(__dirname, 'assets'))); 
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html')); 
-});
-
+// POST route to EmailJS
 app.post('/send-email', async (req, res) => {
-  try {
-    const { fullName, email, phone, subject, message } = req.body;
+  const { name, subject, message } = req.body;
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT, 
-      secure: process.env.SMTP_SECURE === 'true', 
-      auth: {
-        user: process.env.SMTP_USERNAME, 
-        pass: process.env.SMTP_PASSWORD  
+  try {
+    const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', {
+      service_id: process.env.EMAILJS_SERVICE_ID,
+      template_id: process.env.EMAILJS_TEMPLATE_ID,
+      user_id: process.env.EMAILJS_PUBLIC,
+      template_params: {
+        name,
+        subject,
+        message
       }
     });
 
-    const mailOptions = {
-      from: process.env.EMAIL_FROM, 
-      to: process.env.EMAIL_TO,    
-      subject: subject,
-      html: `
-        <p><strong>Full Name:</strong> ${fullName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p> 
-      `
-    };
-
-    await transporter.sendMail(mailOptions);
-    res.status(200).send('OK'); 
-
+    res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Error sending email (Server Error):', error);
-    res.status(500).send('Error sending email'); 
+    console.error('EmailJS error:', error?.response?.data || error.message);
+    res.status(500).json({ success: false, error: 'Failed to send email' });
   }
 });
 
-// Start the server
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });

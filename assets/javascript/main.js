@@ -17,18 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         bar.style.width = width + '%';
     });
 });
-// Hidden Text READ MORE
-document.getElementById('read-more-btn').addEventListener('click', function(event) {
-    event.preventDefault();
-    var hiddenContent = document.getElementById('hidden-content');
-    if (hiddenContent.classList.contains('hidden')) {
-      hiddenContent.classList.remove('hidden');
-      this.textContent = 'Read Less';
-    } else {
-      hiddenContent.classList.add('hidden');
-      this.textContent = 'Read More';
-    }
-  });
 
 // Highlight active navigation link based on scroll position
 let sections = document.querySelectorAll('section');
